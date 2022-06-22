@@ -18,11 +18,27 @@ body{
 }
 
 .card{
-    background-color:black ;
-    border-radius: 2px solid black;color: white;
+    background-color:#000000d0;
+    border-radius: 2px solid black;
+    color: white;
     justify-content: center;
     align-items:  center;
     padding: 10%;
     border-radius: 30px;
+    width: 100%;
+    max-width: 420px;
    
+}
+.card >h1{
+    padding-bottom: 2%;
+    text-align: center;
+}
+.card >#city{
+    padding:2%;
+    outline: none;
+    width: 80%;
+    border-top-right-radius:10px ;
+    border-bottom-left-radius: 10px;
+    font-family:'Fjalla One', sans-serif ;
+    font-size: larger;
 }
