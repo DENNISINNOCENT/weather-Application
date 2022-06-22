@@ -33,7 +33,7 @@ body{
     padding-bottom: 2%;
     text-align: center;
 }
-.card >#city{
+.card >#search-city{
     padding:2%;
     outline: none;
     width: 80%;
