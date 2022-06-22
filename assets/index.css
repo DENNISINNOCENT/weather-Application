@@ -11,11 +11,18 @@ body{
    align-items: center;
     justify-content: center;
     display: flex;
-    background-image: url('https://source.unsplash.com/random/landscape/?nature,water,cloudy');
+    background-image: url('https://source.unsplash.com/random/landscape/?nature,water,cloud,rain');
     background-size: cover;
     font-family: 'Fjalla One', sans-serif;
     height:100vh
 }
-.card{
 
+.card{
+    background-color:black ;
+    border-radius: 2px solid black;color: white;
+    justify-content: center;
+    align-items:  center;
+    padding: 10%;
+    border-radius: 30px;
+   
 }
