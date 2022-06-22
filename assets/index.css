@@ -1,0 +1,21 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding:0px;
+}
+body{
+   align-items: center;
+    justify-content: center;
+    display: flex;
+    background-image: url('https://source.unsplash.com/random/landscape/?nature,water,cloudy');
+    background-size: cover;
+    font-family: 'Fjalla One', sans-serif;
+    height:100vh
+}
+.card{
+
+}
