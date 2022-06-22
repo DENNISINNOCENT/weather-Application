@@ -1,32 +1,37 @@
+//selection
 const search = document.getElementById('search')
-const city =document.getElementById('search-city')
-city.addEventListener('keypress',searchCity)
+const inputCity =document.getElementById('search-city')
 
-search.addEventListener("click",searchCity)
-
-
+//eventlisteners
+search.addEventListener("click",buttonClick)
+inputCity.addEventListener('keypress',searchCity)  
+//entlisteners functions
+function buttonClick(event){
+event.preventDefault()
+fecthData()
+}
 function searchCity(event){
     // event.preventDefault()
     if (event.keyCode == 13){
-        // displayData(city.value)
-        console.log(city.value )
+        fecthData()
+        
     }
 
 }
 
-// function displayData(){
-
+// function displayData(weather){
+// console.log(weather)
 
 // }
 
 
 //Get request
-// function fecthData(){
-//     let url ='https://api.openweathermap.org/data/2.5/weather?q=Machakos,Kenya&APPID=e3dc067684488394b79ea9c31d805834'
-//     fetch(url)
-//     .then(response =>response.json())
-//     .then(data=>{
-//         console.log(data)
-//     })
-// }
-// fecthData()
+function fecthData(){
+    let url ='https://api.openweathermap.org/data/2.5/weather?q='+inputCity.value+'&APPID=e3dc067684488394b79ea9c31d805834'
+    fetch(url)
+    .then(response =>response.json())
+    .then(data=>{
+      console.log(data)
+    })
+}
+
