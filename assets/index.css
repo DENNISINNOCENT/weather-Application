@@ -23,7 +23,7 @@ body{
     color: white;
     justify-content: center;
     align-items:  center;
-    padding: 10%;
+    padding: 15%;
     border-radius: 30px;
     width: 100%;
     max-width: 420px;
@@ -42,3 +42,25 @@ body{
     font-family:'Fjalla One', sans-serif ;
     font-size: larger;
 }
+#search{
+   width: 17%;
+   padding-top: 3%;
+   padding-bottom: 3%;
+   border-radius: 10%;
+   outline: none;
+   padding-right: 17%;
+
+}
+.location{
+    padding-top: 3%;
+    font-size: 50px;
+}
+.date{
+    padding-top: 3%;
+    font-size: 25px;
+}
+.column-weather,.column-temperature,.column-humidity{
+    font-size: 20px;
+    padding-top: 3%;
+}
+
