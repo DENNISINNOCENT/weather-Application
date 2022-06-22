@@ -1,6 +1,9 @@
 //selection
 const search = document.getElementById('search')
 const inputCity =document.getElementById('search-city')
+let locate =document.querySelector('.location')
+let weatherCloud =document.querySelector('#weather')
+
 
 //eventlisteners
 search.addEventListener("click",buttonClick)
@@ -19,10 +22,10 @@ function searchCity(event){
 
 }
 
-// function displayData(weather){
-// console.log(weather)
-
-// }
+function displayData(data){
+locate.innerHTML =`${data.name},${data.sys.country}` 
+weatherCloud.innerHTML =`${data.weather[0].main},${data.weather[0].icon}`
+}
 
 
 //Get request
@@ -31,6 +34,7 @@ function fecthData(){
     fetch(url)
     .then(response =>response.json())
     .then(data=>{
+      displayData(data)
       console.log(data)
     })
 }
