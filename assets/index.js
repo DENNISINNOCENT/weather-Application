@@ -16,7 +16,8 @@ const weatherPressure=document.getElementById('pressure')
 const weatherWind=document.getElementById('wind')
 const locationCoordinates=document.getElementById('coordinates')
 const btnComment=document.getElementById('btnComment')
-const commentSection=document.getElementById('commentSection')
+const commentSection=document.querySelector('.commentSection')
+const form =document.getElementById('form')
 
 
 
@@ -25,6 +26,7 @@ search.addEventListener("click",buttonSubmit)
 inputCity.addEventListener('keypress',searchCity) 
 morebtn.addEventListener('click',showInfo) 
 btnComment.addEventListener('click',showComment)
+form.addEventListener('submit',submitComment)
 
 //entlisteners functions
 //using the search button
@@ -41,14 +43,22 @@ function searchCity(event){
     }
 
 }
-//show and hide information after clicking morebtn
+function submitComment(e){
+e.preventDefault()
+   console.log('comment posted')
+}
+
+
+
+//show and hide information after clicking 
+function showComment(){
+  commentSection.hidden = !commentSection.hidden
+}
 function showInfo(){
     hiddeninfo.hidden = !hiddeninfo.hidden
       
   }
-  function showComment(){
-    commentSection.hidden =!commentSection.hidden
-  }
+  
 
 
 //Dispay fetched information

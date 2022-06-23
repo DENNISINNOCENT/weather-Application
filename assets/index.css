@@ -67,7 +67,7 @@ body{
    color: white;
    font-size: 25px; 
 }
-#more{
+#more,#btnComment{
     font-family: 'Times New Roman', Times, serif;
     font-size: 20px;
     background-color:red;
@@ -86,14 +86,20 @@ body{
     display: flex;
     justify-content: space-between;
 }
-#btnComment{
+
+#txtComment{
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 5%;
+}
+#submit{
     font-family: 'Times New Roman', Times, serif;
     font-size: 20px;
     background-color:#FF0000d0;
-    width: 40%;
+    width: 30%;
     
     margin-top: 2%;
-    margin-left: 10%;
+    margin-left: 5%;
     outline: none;
     border-radius: 3px solid black;
     overflow: hidden;
