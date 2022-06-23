@@ -17,22 +17,38 @@ const weatherWind=document.getElementById('wind')
 const locationCoordinates=document.getElementById('coordinates')
 const btnComment=document.getElementById('btnComment')
 const commentSection=document.querySelector('.commentSection')
-const form =document.getElementById('form')
+const form =document.querySelector('#formComment')
+const namecommentor=document.querySelector('#name')
+const  comment =document.getElementById('txtComment')
+
 
 
 
 //eventlisteners
 search.addEventListener("click",buttonSubmit)
 inputCity.addEventListener('keypress',searchCity) 
+form.addEventListener('submit',getComment)
+//hide/show details
 morebtn.addEventListener('click',showInfo) 
 btnComment.addEventListener('click',showComment)
-form.addEventListener('submit',submitComment)
+
+
 
 //entlisteners functions
 //using the search button
 function buttonSubmit(event){
 event.preventDefault()
 fecthData()
+}
+
+function getComment(event){
+  event.preventDefault()
+  let updateComment = {
+  name:event.target.namecommentor.value,
+  comment:event.target.comment.value
+  }
+  comments(updateComment)
+  console.log('i have no data')
 }
 //using the Enter button to get the input
 function searchCity(event){
@@ -43,14 +59,11 @@ function searchCity(event){
     }
 
 }
-function submitComment(e){
-e.preventDefault()
-   console.log('comment posted')
-}
 
 
 
 //show and hide information after clicking 
+
 function showComment(){
   commentSection.hidden = !commentSection.hidden
 }
@@ -93,5 +106,10 @@ function fecthData(){
     //   console.log(error)
     // })
     })
+}
+function comments(){
+  fetch('http://localhost:3000/comments')
+  
+  
 }
 
