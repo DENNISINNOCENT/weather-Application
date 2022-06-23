@@ -53,8 +53,9 @@ weatherDescription.innerHTML =`${data.weather[0].description}`
 // weatherIcon.src=`https//openweathermap.org/img/wn/"${data.weather[0].icon}"@2x.png`
 weatherTemperature.innerHTML =`Temperature:&nbsp&nbsp ${data.main.temp}<span>°C</span>`
 weatherHimidity.innerHTML= `Humidity:&nbsp ${data.main.humidity}<span>%</span>`
-weatherTimezone.innerHTML=`Timezone:&nbsp&nbsp&${data.timezone}`
-weatherPressure.innerHTML=``
+weatherTimezone.innerHTML=`Timezone:&nbsp&nbsp${data.timezone}`
+weatherPressure.innerHTML=`Pressure:&nbsp&nbsp${data.main.pressure}`
+
 
 }
 //reload the page after every 30seconds
