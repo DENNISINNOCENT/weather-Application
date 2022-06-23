@@ -34,6 +34,11 @@ function searchCity(event){
     }
 
 }
+//show and hide information after clicking morebtn
+function showInfo(){
+    hiddeninfo.hidden = !hiddeninfo.hidden
+      
+  }
 
 
 //Dispay fetched information
