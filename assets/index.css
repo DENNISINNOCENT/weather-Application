@@ -75,5 +75,10 @@ body{
     display: flex;
     margin-top: 2%;
     margin-left: 30%;
+    outline: none;
+    border-radius: 3px solid black;
+    overflow: hidden;
+    transition: 5s;
+    
 
 }

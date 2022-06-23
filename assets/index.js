@@ -9,6 +9,8 @@ let weatherDescription =document.querySelector('#weather')
 let weatherTemperature=document.querySelector('#temperature')
 let weatherHimidity=document.querySelector('#humidity')
 let weatherIcon =document.querySelector('#icon')
+const morebtn =document.querySelector('#more')
+const hiddeninfo =document.querySelector('.hidden')
 
 
 
