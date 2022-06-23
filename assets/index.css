@@ -67,3 +67,13 @@ body{
    color: white;
    font-size: 25px; 
 }
+#more{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    background-color:red;
+    width: 40%;
+    display: flex;
+    margin-top: 2%;
+    margin-left: 30%;
+
+}
