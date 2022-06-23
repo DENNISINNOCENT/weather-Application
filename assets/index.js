@@ -7,7 +7,7 @@ const inputCity =document.getElementById('search-city')
 let locate =document.querySelector('.location')
 let weatherDescription =document.querySelector('#weather')
 let weatherTemperature=document.querySelector('#temperature')
-let weatherHimidity=document.querySelector('#humidity')
+let weatherHumidity=document.querySelector('#humidity')
 let weatherIcon =document.querySelector('#icon')
 const morebtn =document.querySelector('#more')
 const hiddeninfo =document.querySelector('.hidden')
@@ -52,10 +52,11 @@ locate.innerHTML =`${data.name},${data.sys.country}`
 weatherDescription.innerHTML =`${data.weather[0].description}`
 // weatherIcon.src=`https//openweathermap.org/img/wn/"${data.weather[0].icon}"@2x.png`
 weatherTemperature.innerHTML =`Temperature:&nbsp&nbsp ${data.main.temp}<span>°C</span>`
-weatherHimidity.innerHTML= `Humidity:&nbsp ${data.main.humidity}<span>%</span>`
+weatherHumidity.innerHTML= `Humidity:&nbsp ${data.main.humidity}<span>%</span>`
 weatherTimezone.innerHTML=`Timezone:&nbsp&nbsp${data.timezone}`
 weatherPressure.innerHTML=`Pressure:&nbsp&nbsp${data.main.pressure}`
-
+weatherWind.innerHTML=`Wind Speed:&nbsp&nbsp${data.wind.speed}`
+locationCoordinates.innerHTML=`Longitude&nbsp&nbsp${data.coord.lon},&nbsp&nbspLatitude&nbsp&nbsp${data.coord.lat}`
 
 }
 //reload the page after every 30seconds
