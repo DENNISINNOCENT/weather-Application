@@ -51,6 +51,10 @@ weatherTemperature.innerHTML =`Temperature:&nbsp&nbsp ${data.main.temp}<span>°C
 weatherHimidity.innerHTML= `Humidity:&nbsp&nbsp ${data.main.humidity}<span>%</span>`
 
 }
+//reload the page after every 30seconds
+setTimeout(() =>{
+    location.reload();
+  }, 30000);
 
 
 //Get request
