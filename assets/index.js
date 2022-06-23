@@ -16,7 +16,8 @@ const hiddeninfo =document.querySelector('.hidden')
 
 //eventlisteners
 search.addEventListener("click",buttonClick)
-inputCity.addEventListener('keypress',searchCity)  
+inputCity.addEventListener('keypress',searchCity) 
+morebtn.addEventListener('click',showInfo) 
 
 //entlisteners functions
 //using the search button
