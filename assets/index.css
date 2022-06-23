@@ -72,13 +72,30 @@ body{
     font-size: 20px;
     background-color:red;
     width: 40%;
-    display: flex;
+    
     margin-top: 2%;
-    margin-left: 30%;
+    margin-left: 10%;
     outline: none;
     border-radius: 3px solid black;
     overflow: hidden;
     transition: 5s;
     
 
+}
+.hidebuttons{
+    display: flex;
+    justify-content: space-between;
+}
+#btnComment{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    background-color:#FF0000d0;
+    width: 40%;
+    
+    margin-top: 2%;
+    margin-left: 10%;
+    outline: none;
+    border-radius: 3px solid black;
+    overflow: hidden;
+    transition: 5s;   
 }
