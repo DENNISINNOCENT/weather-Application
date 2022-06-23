@@ -15,6 +15,8 @@ const weatherTimezone=document.getElementById('timezone')
 const weatherPressure=document.getElementById('pressure')
 const weatherWind=document.getElementById('wind')
 const locationCoordinates=document.getElementById('coordinates')
+const btnComment=document.getElementById('btnComment')
+const commentSection=document.getElementById('commentSection')
 
 
 
@@ -22,6 +24,7 @@ const locationCoordinates=document.getElementById('coordinates')
 search.addEventListener("click",buttonSubmit)
 inputCity.addEventListener('keypress',searchCity) 
 morebtn.addEventListener('click',showInfo) 
+btnComment.addEventListener('click',showComment)
 
 //entlisteners functions
 //using the search button
@@ -42,6 +45,9 @@ function searchCity(event){
 function showInfo(){
     hiddeninfo.hidden = !hiddeninfo.hidden
       
+  }
+  function showComment(){
+    commentSection.hidden =!commentSection.hidden
   }
 
 
