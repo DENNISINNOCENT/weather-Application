@@ -8,7 +8,7 @@
     padding:0px;
 }
 body{
-   align-items: center;
+    align-items: center;
     justify-content: center;
     display: flex;
     background-image: url('https://source.unsplash.com/random/landscape/?nature,water,cloud,rain');
