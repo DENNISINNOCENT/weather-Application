@@ -2,7 +2,8 @@
 const search = document.getElementById('search')
 const inputCity =document.getElementById('search-city')
 let locate =document.querySelector('.location')
-let weatherCloud =document.querySelector('#weather')
+let weatherDescription =document.querySelector('#weather')
+let weatherTemperature=document.querySelector('#temperature')
 
 
 //eventlisteners
@@ -24,7 +25,8 @@ function searchCity(event){
 
 function displayData(data){
 locate.innerHTML =`${data.name},${data.sys.country}` 
-weatherCloud.innerHTML =`${data.weather[0].main},${data.weather[0].icon}`
+weatherDescription.innerHTML =`${data.weather[0].description},${data.weather[0].icon}`
+weatherTemperature.innerHTML =`${data.main.temp}`
 }
 
 
