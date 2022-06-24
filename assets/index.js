@@ -18,8 +18,8 @@ const locationCoordinates=document.getElementById('coordinates')
 const btnComment=document.getElementById('btnComment')
 const commentSection=document.querySelector('.commentSection')
 const form =document.querySelector('#formComment')
-let namecommentor=document.querySelector('#name')
-let  comment =document.getElementById('txtComment')
+let nameCommentor = document.getElementById('commentorName')
+let comment =document.getElementById('txtComment')
 let date  = document.querySelector('.date')
 
 
@@ -62,8 +62,6 @@ function showInfo(){
     hiddeninfo.hidden = !hiddeninfo.hidden
       
   }
-  
-
 
 //Dispay fetched information
 
@@ -96,12 +94,18 @@ function dateCreate(d){
 //posting data to db.json
 function getComment(event){
   event.preventDefault()
-  // let updateComment = {
-  // name:event.target.namecommentor.value,
-  // comment:event.target.comment.value
+  // console.log(namecommentor.value)
+  // console.log(comment.value)
+  let nameUpdate
+  let commentUpdate
+  let updateComment = {
+    
+     commentUpdate:event.target.comment.value,
+     nameUpdate:event.target.nameCommentor.value
   
-  // }
-// comments(updateComment)
+  }
+comments(updateComment)
+//  
   console.log('i have no data')
 }
 
@@ -124,17 +128,19 @@ function fecthData(){
     // })
     })
 }
-// function comments(){
-//   fetch('http://localhost:3000/comments',{
-//     method:'POST',
-//     headers:{
-//       "Content-Type":"application/json"
-//     },
-//     body:JSON.stringify(getComment)
-//   })
-//   .then(response=>response.json())
-//   .then(data=>getComment(updateComment))
+function comments(updateComment){
+  // console.log(JSON.stringify(getComment))
+  fetch('http://localhost:3000/comments',{
+    method:'POST',
+    headers:{
+      "Content-Type":"application/json"
+    },
+    body:JSON.stringify(updateComment)
+  })
+  .then(response=>response.json())
+  .then(data => console.log(data))
   
   
-// }
+}
+
 
