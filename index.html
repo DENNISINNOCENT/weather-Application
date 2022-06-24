@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Application</title>
+    <script src="https://kit.fontawesome.com/b7c85d9aa9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./assets/index.css">
+</head>
+<body>
+    
+    <div class="container">
+        <h2>Always Feels Cool To Know Your Weather Pattern</h2>
+        <div class="card">
+            <h1>Weather</h1>
+            <input type="search-city" id="search-city" name="city">
+            <button type="submit" id="search" name="submit">Submit</button>
+            <div class="location">Nairobi,Kenya</div>
+            <div class="date">Friday 24 June 2022</div>
+            <div class="column-weather">
+                <p id="weather">Overcast Clouds </p>
+                <img src="" id='icon' alt=""></p>
+            </div>
+            <div class="column-temperature">
+                <p id="temperature"> 27 <span>°C</span></p>
+            </div>
+            <div class="column-humidity">
+                <p id="humidity">Humidity: &nbsp&nbsp70%</p>
+            </div>
+            <div class="hidebuttons">
+            <button type="more" id="more">More Updates</button>
+            <button type="btnComment" id="btnComment">Comment</button>
+        </div>
+            <div class="hidden" hidden>
+                <p id="timezone">Timezone</p>
+                <p id="pressure">Pressure</p>
+                <p id="wind">Wind</p>
+                <p id="coordinates">Coordinates</p>
+            </div>
+            <div class="commentSection">
+              <form action="" method="POST" id ="formComment">
+              <input type="text" id="commentorName" name="commentorName" value=" " placeholder="Enter your name"/>
+              <textarea name="comment" id="txtComment" cols="30" rows="4" placeholder="leave a comment"></textarea>
+              <div>
+              <input type="submit" value="submit" id="submit">
+            </div>
+        </form>
+            </div>
+           
+            
+            </form>
+
+        </div>
+    </div>
+
+    <script src ="./assets/index.js"></script>
+</body>
+</html>

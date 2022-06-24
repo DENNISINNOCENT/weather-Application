@@ -1,0 +1,115 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding:0px;
+}
+body{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-image: url('https://source.unsplash.com/random/landscape/?nature,water,cloud,rain');
+    background-size: cover;
+    font-family: 'Fjalla One', sans-serif;
+    height:100vh
+}
+
+.card{
+    background-color:#000000d0;
+    border-radius: 2px solid black;
+    color: white;
+    justify-content: center;
+    align-items:  center;
+    padding: 10%;
+    border-radius: 30px;
+    width: 100%;
+    max-width: 420px;
+   
+}
+.card >h1{
+    padding-bottom: 2%;
+    text-align: center;
+}
+.card >#search-city{
+    padding:2%;
+    outline: none;
+    width: 80%;
+    border-top-right-radius:10px ;
+    border-bottom-left-radius: 10px;
+    font-family:'Fjalla One', sans-serif ;
+    font-size: larger;
+}
+#search{
+   width: 17%;
+   padding-top: 3%;
+   padding-bottom: 3%;
+   border-radius: 10%;
+   outline: none;
+   padding-right: 17%;
+
+}
+.location{
+    padding-top: 3%;
+    font-size: 50px;
+}
+.date{
+    padding-top: 3%;
+    font-size: 25px;
+}
+.column-weather,.column-temperature,.column-humidity{
+    font-size: 20px;
+    padding-top: 3%;
+}
+.container >h2{
+   color: white;
+   font-size: 25px; 
+}
+#more,#btnComment{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    background-color:red;
+    width: 40%;
+    
+    margin-top: 2%;
+    margin-left: 10%;
+    outline: none;
+    border-radius: 3px solid black;
+    overflow: hidden;
+    transition: 5s;
+    
+
+}
+.hidebuttons{
+    display: flex;
+    justify-content: space-between;
+}
+
+.commentSection{
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 5%;
+}
+#submit{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    background-color:#FF0000d0;
+    width: 30%;
+    
+    margin-top: 2%;
+    margin-left: 5%;
+    outline: none;
+    border-radius: 3px solid black;
+    overflow: hidden;
+    transition: 5s;   
+}
+#commentorName,#txtComment{
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 5%;
+    border-radius: 2%;
+    outline: none;
+}
+
