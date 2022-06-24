@@ -101,7 +101,7 @@ function getComment(event){
   let updateComment = [{
     
      commentUpdate:event.target.comment.value,
-     updateName:event.target.nameCommentor.value
+    //  updateName:event.target.nameCommentor.value
   }]
 comments(updateComment)
 //  
