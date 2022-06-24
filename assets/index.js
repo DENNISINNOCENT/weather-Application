@@ -96,11 +96,11 @@ function dateCreate(d){
 //posting data to db.json
 function getComment(event){
   event.preventDefault()
-  let updateComment = {
-  name:event.target.namecommentor.value,
-  comment:event.target.comment.value
+  // let updateComment = {
+  // name:event.target.namecommentor.value,
+  // comment:event.target.comment.value
   
-  }
+  // }
 // comments(updateComment)
   console.log('i have no data')
 }
@@ -124,17 +124,17 @@ function fecthData(){
     // })
     })
 }
-function comments(){
-  fetch('http://localhost:3000/comments',{
-    method:'POST',
-    headers:{
-      "Content-Type":"application/json"
-    },
-    body:JSON.stringify(getComment)
-  })
-  .then(response=>response.json())
-  .then(data=>getComment(updateComment))
+// function comments(){
+//   fetch('http://localhost:3000/comments',{
+//     method:'POST',
+//     headers:{
+//       "Content-Type":"application/json"
+//     },
+//     body:JSON.stringify(getComment)
+//   })
+//   .then(response=>response.json())
+//   .then(data=>getComment(updateComment))
   
   
-}
+// }
 
