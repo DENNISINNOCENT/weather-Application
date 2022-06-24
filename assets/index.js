@@ -18,7 +18,7 @@ const locationCoordinates=document.getElementById('coordinates')
 const btnComment=document.getElementById('btnComment')
 const commentSection=document.querySelector('.commentSection')
 const form =document.querySelector('#formComment')
-let nameCommentor = document.getElementById('commentorName')
+const nameCommentor = document.getElementById('commentorName')
 let comment =document.getElementById('txtComment')
 let date  = document.querySelector('.date')
 
@@ -94,16 +94,15 @@ function dateCreate(d){
 //posting data to db.json
 function getComment(event){
   event.preventDefault()
-  // console.log(namecommentor.value)
+  console.log(nameCommentor.value)
   // console.log(comment.value)
-  let nameUpdate
-  let commentUpdate
-  let updateComment = {
+  let updateName =""
+  let commentUpdate =''
+  let updateComment = [{
     
      commentUpdate:event.target.comment.value,
-     nameUpdate:event.target.nameCommentor.value
-  
-  }
+     updateName:event.target.nameCommentor.value
+  }]
 comments(updateComment)
 //  
   console.log('i have no data')
@@ -128,6 +127,7 @@ function fecthData(){
     // })
     })
 }
+//Post Request
 function comments(updateComment){
   // console.log(JSON.stringify(getComment))
   fetch('http://localhost:3000/comments',{
@@ -138,7 +138,7 @@ function comments(updateComment){
     body:JSON.stringify(updateComment)
   })
   .then(response=>response.json())
-  .then(data => console.log(data))
+  .then(data => updateComment)
   
   
 }
