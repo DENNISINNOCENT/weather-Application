@@ -18,8 +18,9 @@ const locationCoordinates=document.getElementById('coordinates')
 const btnComment=document.getElementById('btnComment')
 const commentSection=document.querySelector('.commentSection')
 const form =document.querySelector('#formComment')
-const namecommentor=document.querySelector('#name')
-const  comment =document.getElementById('txtComment')
+let namecommentor=document.querySelector('#name')
+let  comment =document.getElementById('txtComment')
+let date  = document.querySelector('.date')
 
 
 
@@ -33,7 +34,6 @@ morebtn.addEventListener('click',showInfo)
 btnComment.addEventListener('click',showComment)
 
 
-
 //entlisteners functions
 //using the search button
 function buttonSubmit(event){
@@ -41,15 +41,7 @@ event.preventDefault()
 fecthData()
 }
 
-function getComment(event){
-  event.preventDefault()
-  let updateComment = {
-  name:event.target.namecommentor.value,
-  comment:event.target.comment.value
-  }
-  comments(updateComment)
-  console.log('i have no data')
-}
+
 //using the Enter button to get the input
 function searchCity(event){
 
@@ -59,7 +51,6 @@ function searchCity(event){
     }
 
 }
-
 
 
 //show and hide information after clicking 
@@ -86,8 +77,34 @@ weatherTimezone.innerHTML=`Timezone:&nbsp&nbsp${data.timezone}`
 weatherPressure.innerHTML=`Pressure:&nbsp&nbsp${data.main.pressure}`
 weatherWind.innerHTML=`Wind Speed:&nbsp&nbsp${data.wind.speed}`
 locationCoordinates.innerHTML=`Longitude&nbsp&nbsp${data.coord.lon},&nbsp&nbspLatitude&nbsp&nbsp${data.coord.lat}`
+let now =new Date()
+date.innerText =dateCreate(now)
+
 
 }
+//function for my dates
+function dateCreate(d){
+  let months =['January','February','March','April','May','June','July','August','September','October','November','December']
+  let days =['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  let day =days[d.getDay()]
+  let date =d.getDate();
+  let month =months[d.getMonth()];
+  let year=d.getFullYear();
+
+  return `${day} ${date} ${month} ${year}`;
+}
+//posting data to db.json
+function getComment(event){
+  event.preventDefault()
+  let updateComment = {
+  name:event.target.namecommentor.value,
+  comment:event.target.comment.value
+  
+  }
+// comments(updateComment)
+  console.log('i have no data')
+}
+
 //reload the page after every 30seconds
 setTimeout(() =>{
     location.reload();
@@ -108,7 +125,15 @@ function fecthData(){
     })
 }
 function comments(){
-  fetch('http://localhost:3000/comments')
+  fetch('http://localhost:3000/comments',{
+    method:'POST',
+    headers:{
+      "Content-Type":"application/json"
+    },
+    body:JSON.stringify(getComment)
+  })
+  .then(response=>response.json())
+  .then(data=>getComment(updateComment))
   
   
 }
