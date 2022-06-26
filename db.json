@@ -21,7 +21,15 @@
       {
         "commentUpdate": "The weather is great"
       }
-    ]
+    ],
+    {
+      "commentUpdate": "cool",
+      "id": 2
+    },
+    {
+      "commentUpdate": "cool",
+      "id": 3
+    }
   ],
   "profile": {
     "name": "typicode"

@@ -18,7 +18,7 @@ const locationCoordinates=document.getElementById('coordinates')
 const btnComment=document.getElementById('btnComment')
 const commentSection=document.querySelector('.commentSection')
 const form =document.querySelector('#formComment')
-const nameCommentor = document.getElementById('commentorName')
+const name  = document.getElementById('name')
 let comment =document.getElementById('txtComment')
 let date  = document.querySelector('.date')
 
@@ -34,7 +34,7 @@ morebtn.addEventListener('click',showInfo)
 btnComment.addEventListener('click',showComment)
 
 
-//entlisteners functions
+//eventlisteners functions
 //using the search button
 function buttonSubmit(event){
 event.preventDefault()
@@ -94,21 +94,22 @@ function dateCreate(d){
 //posting data to db.json
 function getComment(event){
   event.preventDefault()
-  console.log(nameCommentor.value)
+  // 
   // console.log(comment.value)
-  let updateName =""
-  let commentUpdate =''
-  let updateComment = [{
+  let Name =""
+  let comment =''
+
+  let updateComment = {
     
-     commentUpdate:event.target.comment.value,
-    //  updateName:event.target.nameCommentor.value
-  }]
+     Name:event.target.name.value,
+     comment:event.target.comment.value,
+  }
 comments(updateComment)
 //  
-  console.log('i have no data')
+  // console.log('i have no data')
 }
 
-//reload the page after every 30seconds
+//reload the page after every 60seconds
 setTimeout(() =>{
     location.reload();
   }, 60000);
@@ -121,15 +122,15 @@ function fecthData(){
     .then(response =>response.json())
     .then(data=>{
       displayData(data)
-      console.log(data)
-    // .catch(error=>{
-    //   console.log(error)
-    // })
+      // console.log(data)
+    .catch(error=>{
+      console.log(error)
+    })
     })
 }
 //Post Request
 function comments(updateComment){
-  // console.log(JSON.stringify(getComment))
+ 
   fetch('http://localhost:3000/comments',{
     method:'POST',
     headers:{
@@ -138,7 +139,7 @@ function comments(updateComment){
     body:JSON.stringify(updateComment)
   })
   .then(response=>response.json())
-  .then(data => updateComment)
+  .then(data => console.log(updateComment))
   
   
 }
