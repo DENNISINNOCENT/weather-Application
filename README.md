@@ -1,11 +1,10 @@
 # Weather App
  ## By Dennis Mwendwa
 ## Screenshot
- ![image](./assets/delanii.png)
+ ![image](/assets/image/Screenshot%20from%202022-06-26%2022-58-44.png)
  ## Table of Content
  - [Description](#description)
  - [Features](#features)
- - [Behaviour Driven Development](#Behaviour-Driven-Development)
  - [Requirements](#requirements)
  - [Installation Process](#installation-Process)
  - [Live Link](#Live-Link)
@@ -13,20 +12,14 @@
  - [Licence](#licence)
  - 
  ## Description
- <p></p>
-[Go Back to the top](#weather -app)
+ <p> This weather app is an appliction that fetches the current weather updates of all over the world and its value to the user.</p>
+
 ## Features
 As a user of the application,you will be able to :
-1. See a description of what the services offered by the studio
-1. Can make inquiry through a form.
-[Go Back to the top](#delani-studio)
-## Behaviour Driven Development|
-| Behaviour      | Input        | Output       |
-| :------------- | :----------: | -----------: |
-|  Enter your name  |   Albert Byrone |     |
-| Enter your Email Address  | albertbyrone1677@gmail.com |   |
-| Enter your message or comment   |  I would like to inquire about something     |     |
-| Press Submit|     |Pop up "Albert Byrone , we have received your message. Thank you for reaching out to us.|
+1. input the city of your choice you want to see its weather update
+1. Leave a comment based on the weather updates 
+
+
 [Go Back to the top](#weather-app)
  ###  Requirements
  * Access to  a computer or any other garget
@@ -38,15 +31,18 @@ As a user of the application,you will be able to :
 * Open the index file from the zipped file with any browser.
  ****
  [Go Back to the top](#weather-app)
+### Api link
+https://api.openweathermap.org/data/2.5/weather?q&units=metric&APPID=e3dc067684488394b79ea9c31d805834'
 ### Live Link
 - Click this link to view the live application https://dennisinnocent.github.io/weather-Application/
 ### Technology  Used
-* HTML - which was used to develope the structure off the pages.
+* HTML - which was used to develope the structure off the page.
 * CSS - which was used to style the User Interface.
 * Javascript - which was used for DOM(Document Object Manipulation) scripts.
 [Go Back to the top](#weather-app)
 ## Known Bugs
-
+When running the application you will need to start the default db.json inorder to be able to post comments.
+http://localhost:3000/comments
 ## Licence
 MIT License
 Copyright (c) [2022] [Dennis Mwendwa]
